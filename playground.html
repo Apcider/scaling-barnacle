@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Playground</title>
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#dn").click(function(){
+        $("#bg").toggleClass("night day");
+        $("#moon").toggleClass("moon");
+        $("#sun").toggleClass("sun");
+      });
+    });
+  </script>
+</head>
+
+<body>  
+  <div id="bg" class="solar-syst day" style="height: 100vh;">
+    <div class="toggleWrapper">
+      <input type="checkbox" class="dn" id="dn"/>
+      <label for="dn" class="toggle">
+        <span class="toggle__handler">
+          <span class="crater crater--1"></span>
+          <span class="crater crater--2"></span>
+          <span class="crater crater--3"></span>
+        </span>
+        <span class="star star--1"></span>
+        <span class="star star--2"></span>
+        <span class="star star--3"></span>
+        <span class="star star--4"></span>
+        <span class="star star--5"></span>
+        <span class="star star--6"></span>
+      </label>
+    </div>
+
+    <div id="moon"></div>
+    
+    <div id="sun" class="sun"></div>
+
+  </div>
+
+  <div class='description'>
+    <h1>day & night</h1>
+    <hr>
+    <p>
+      I created this toggle function using CSS and JS.
+      Each toggle displays day and night with the Sun and Moon rising respectively.
+    </p>
+    <p>
+      The css tricks I used are box-shadow and radial-gradient in the background.
+    </p>
+    <hr>
+    <p class="author">By HMZ 2019</p>
+  </div>
+
+</body>
+</html>
